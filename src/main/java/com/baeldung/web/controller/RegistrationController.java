@@ -90,6 +90,13 @@ public class RegistrationController {
         return new ModelAndView("console", model);
     }
 
+    @GetMapping("/manager")
+    public ModelAndView manager(final ModelMap model) {
+    	
+        return new ModelAndView("manager", model);
+        
+    }
+    
     @GetMapping("/badUser")
     public ModelAndView badUser(final HttpServletRequest request, final ModelMap model, @RequestParam("messageKey" ) final Optional<String> messageKey, @RequestParam("expired" ) final Optional<String> expired, @RequestParam("token" ) final Optional<String> token) {
 
